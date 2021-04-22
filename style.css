@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  width: 80vw;
+  margin: auto;
+  margin-top: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  color: #f50029cb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 13px;
+  padding-left: 15px;
+  font-weight: 700;
+  animation-name: slideleft;
+  animation-duration: 1s;
+}
+@keyframes slideleft {
+  from {
+    transform: translateY(-1000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.inputKeywordsHandle {
+  position: relative;
+  display: flex;
+}
+
+.inputKeywordsHandle input[type="text"] {
+  height: 30px;
+  display: inline-block;
+  width: 64%;
+  outline: none;
+}
+
+.inputKeywordsHandle ul {
+  margin: 0;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  list-style: none;
+}
+
+.inputKeywordsHandle ul li {
+  background: #e60228cb;
+  opacity: 0.9;
+  height: 30px;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding-left: 30px;
+  border-bottom: solid 1px white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.inputKeywordsHandle ul li:last-of-type {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.inputKeywordsHandle ul li:first-of-type {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.fake-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.fake-form input[type="text"] {
+  border-radius: 30px;
+  border: solid 1px lightgrey;
+  height: 30px;
+  padding-left: 20px;
+}
+
+.fake-form input[type="submit"] {
+  border-radius: 30px;
+  border: solid 1px lightgrey;
+  height: 30px;
+  margin-left: 30px;
+  width: 15%;
+  background: #f50029cb;
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+#ReadMore {
+  border-radius: 30px;
+  border: solid 1px lightgrey;
+  height: 30px;
+  width: 200px;
+  background: #f50029cb;
+  cursor: pointer;
+  color: white;
+  outline: none;
+}
+
+article {
+  display: flex;
+
+  margin: 20px 0;
+  border: solid 1px rgb(243, 243, 243);
+  padding: 20px;
+  width: 80%;
+  border-radius: 10px;
+  background-color: rgb(249, 249, 249);
+  position: relative;
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+article.not-visible {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+article img {
+  height: 250px;
+  margin-right: 150px;
+  cursor: pointer;
+}
+
+article h2 {
+  color: #f50029cb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+}
+.Year {
+  padding-bottom: 165px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.imgInModal {
+  padding-right: 50px;
+}
+.infoMovieModal {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.articlesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.keywordsList {
+  margin-top: 20px;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.movie {
+  display: flex;
+  flex-direction: column;
+}
+.infoMovie {
+  display: flex;
+  flex-direction: column;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  display: flex;
+  background-color: rgb(249, 249, 249);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid lightgrey;
+  width: 80%;
+  border-radius: 8px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.imgInModal img {
+  box-shadow: 1px 1px 12px #555;
+}
+.infoMovieModal h2 {
+  font-weight: 800;
+  font-size: 35px;
+  text-decoration: underline;
+}
